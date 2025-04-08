@@ -1,0 +1,38 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Círculo</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-img src="assets/imagen/circulo.png"></ion-img>
+
+    <div class="explicacion">
+      <h3>Perímetro</h3>
+      <p>El perímetro de un círculo es la longitud de la línea que forma su borde.</p>
+
+      <ion-list lines="none">
+        <ion-item>
+          <ion-label><strong>Donde:</strong></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>( P ): perímetro</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>( d ): diámetro</ion-label>
+        </ion-item>
+        <ion-item>( pi ): 3.1416</ion-item>
+      </ion-list>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Radio (cm)</ion-label>
+      <ion-input type="number" [(ngModel)]="radio"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="calcularPerimetro()">Calcula Perímetro</ion-button>
+
+    <ion-item *ngIf="resultado">
+      <ion-label>{{ resultado }}</ion-label>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
